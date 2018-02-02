@@ -40,7 +40,7 @@ public class HomeController {
 
             if (result.hasErrors()) {
 
-                return "resumeForm";
+                return "resumeform";
 
             }
 
@@ -51,7 +51,7 @@ public class HomeController {
         }
         @RequestMapping("/detail/{id}")
 
-        public String showAddressbook(@PathVariable("id") long id, Model model){
+        public String showResume(@PathVariable("id") long id, Model model){
 
             model.addAttribute("resume", resumeRepository.findOne(id));
 
@@ -65,9 +65,10 @@ public class HomeController {
 
             model.addAttribute("resume", resumeRepository.findOne(id));
 
-            return "resumeForm";
+            return "resumeform";
 
         }
+
 
         @RequestMapping("/delete/{id}")
 

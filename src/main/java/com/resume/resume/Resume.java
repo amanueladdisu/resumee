@@ -14,7 +14,7 @@ public class Resume {
     private long id;
 
     @NotNull
-    @Size(max=10)
+    @Size(min=4)
     private String name;
 
     @NotNull
@@ -26,7 +26,7 @@ public class Resume {
     private String education;
 
     @NotNull
-    @Size(min=4)
+    @Size(min=10)
     private String experience;
     @NotNull
     @Size(min=3)

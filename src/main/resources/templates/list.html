@@ -14,36 +14,46 @@
 
 <a href="/add">Add a Resume</a><br />
 
+
 <table>
 
     <tr>
 
-        <th>id</th>
+        <td>id</td>
 
-        <th>Name:</th>
-        <th>Emailaddress:</th>
-        <th>Education:</th>
-        <th>Experience:</th>
-        <th>Skills:</th>
+        <td>Name:</td>
+        <td>Emailaddress:</td>
+        <td>Education:</td>
+        <td>Experience:</td>
+        <td>Skills:</td>
     </tr>
 
     <tr th:each="resume : ${resumes}">
-        <td th:text="${resume.name}"></td>
-        <td th:text="${resume.emailaddress}"></td>
-        <td th:text="${resume.education}"></td>
-        <td th:text="${resume.experience}"></td>
-        <td th:text="${resume.skills}"></td>
+        <th th:text="${resume.name}"></th>
+        <th th:text="${resume.emailaddress}"></th><br />
+        <th th:text="${resume.education}"></th>
+        <th th:text="${resume.experience}"></th>
+        <th th:text="${resume.skills}"></th>
+
+
         <td>
 
-            <a th:href="@{/update/{id}(id=${resume.id})}">Update</a> -
-            <a th:href="@{/detail/{id}(id=${resume.id})}">Detail</a> -
-            <a th:href="@{/delete/{id}(id=${resume.id})}">Delete</a> -
+            <a th:href="@{/update/{id}(id=${resume.id})}">Add a education</a>
+            <a th:href="@{/update/{id}(id=${resume.id})}">Add a experience</a>
+            <a th:href="@{/update/{id}(id=${resume.id})}">Add a skills</a>
+            <a th:href="@{/detail/{id}(id=${resume.id})}">Detail</a>
+            <a th:href="@{/delete/{id}(id=${resume.id})}">Delete</a>
+
 
         </td>
 
+
     </tr>
 
+
+
 </table>
+
 
 </body>
 

@@ -31,15 +31,15 @@
     <span th:if="${#fields.hasErrors('emailaddress')}"
           th:errors="*{emailaddress}"></span><br />
 <br />
-    Education :<textarea rows="5" th:field="*{education}" />
+    Education :<textarea type="text" rows="8" th:field="*{education}" /><br/>
     <span th:if="${#fields.hasErrors('education')}"
           th:errors="*{education}"></span><br />
 <br/>
-    Experience :<textarea rows="10" th:field="*{experience}" />
+    Experience :<textarea rows="4" th:field="*{experience}" />
     <span th:if="${#fields.hasErrors('experience')}"
           th:errors="*{experience}"></span><br />
 <br />
-    Skills :<textarea rows="5" th:field="*{skills}" />
+    Skills :<textarea rows="8" th:field="*{skills}" />
     <label th:if="${#fields.hasErrors('skills')}"
           th:errors="*{skills}"></label><br />
 
