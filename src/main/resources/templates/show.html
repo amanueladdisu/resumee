@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="www.thymeleaf.org">
+
+<head>
+
+    <meta charset="UTF-8" />
+
+    <title>Title</title>
+
+</head>
+
+<body>
+<a href="/">Show All Resumes</a><br />
+Id :<p th:text="${resume.id}" ></p><br />
+Name :<p th:text="${resume.name}" ></p><br />
+Emailaddress:<p th:text="${resume.emailaddress}" ></p><br />
+Education :<p th:text="${resume.education}" ></p><br />
+Experience :<p th:text="${resume.experience}" ></p><br />
+Skills :<p th:text="${resume.skills}" ></p><br />
+
+<a th:href="@{/delete/{id}(id=${resume.id})}">Delete this resume</a><br />
+
+</body>
+
+</html>
